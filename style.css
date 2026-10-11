@@ -467,6 +467,22 @@ textarea {
   transform: translateY(0);
 }
 
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 30;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--text);
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 :root {
   color-scheme: light;
   --background: #f6f7fb;
@@ -932,6 +948,21 @@ textarea {
 }
 
 .reveal-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-card {
+  opacity: 1;
+  transform: none;
+}
+
+.js-reveal .reveal-card {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.js-reveal .reveal-card.visible {
   opacity: 1;
   transform: translateY(0);
 }
